@@ -6,7 +6,7 @@ export default class SearchTextBoxComponent extends Component{
 
     render() {
         return (<View style={style.container}>
-            <TextInput style={style.textBox} placeholder="电影/电视剧/影人" editable={true}/>
+            <TextInput style={style.textBox} placeholder="电影/电视剧/影人" editable={true} underlineColorAndroid="transparent"/>
         </View>)
     }
 }
@@ -20,6 +20,8 @@ const style = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 8,
         borderColor: '#ccc',
+        paddingTop:0,
+        paddingBottom:0,
         paddingLeft: 10,
         paddingRight: 10,
         // backgroundImage:url('../images/find.png')
