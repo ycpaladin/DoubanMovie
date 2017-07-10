@@ -1,10 +1,12 @@
 
 import React, { Component } from 'react';
 import { View, StyleSheet,Image, StatusBar } from 'react-native';
-// import TabNavigaror, { Item } from 'react-native-tab-navigator';
 import { StackNavigator, TabNavigator, TabBarBottom} from 'react-navigation';
 import color from './config/color';
 import MoviePage from './pages/MoviePage';
+import FindPage from './pages/FindPage';
+import MinePage from './pages/MinePage';
+
 const lightContentScenes = ['Home', 'My'];
 
 
@@ -59,14 +61,14 @@ const TabScreen = TabNavigator({
             })
         },
         Find:{
-            screen:MoviePage,
+            screen:FindPage,
             navigationOptions:({navigation})=>({
                 tabBarLabel:'找片',
                 tabBarIcon:({ focused,tintColor})=>(<Image source={require('./images/eye.png')} style={style.icon}/>)
             })
         },
         My:{
-            screen:MoviePage,
+            screen:MinePage,
             navigationOptions:({navigation})=>({
                 tabBarLabel:'我的',
                 tabBarIcon:({ focused,tintColor})=>(<Image source={require('./images/my.png')} style={style.icon}/>)

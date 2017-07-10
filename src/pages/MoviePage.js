@@ -1,32 +1,28 @@
 import React, { Component } from 'react';
 import { ListView, Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { getMovieList } from '../actions/movieActions';
+
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
-import MovieListComponent from '../components/MioveListComponent';
+import HotMovieComponent from '../components/HotMovieComponent';
+import UpcomingMovieList from '../components/UpcomingMovieComponent';
 import TestComponent from '../components/TestComponent';
 import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
 
-class MoviePage extends Component {
+const tabViews = [{ title:'正在热映', component: HotMovieComponent},{ title:'即将上映', component:UpcomingMovieList }]
+
+export default class MoviePage extends Component {
 
     static navigationOptions = ({nativgation})=>({
         headerStyle:{ display:'none'},
     });
 
-    componentDidMount() {
-        const { dispatch } = this.props;
-        dispatch(getMovieList());
-    }
-
+    
     render() {
-        // const { } = this.props;
-        const titles = ['正在热映', '即将上映'];
-        const items = titles.map((title, index) => (<MovieListComponent key={index} tabLabel={title} />))
-
+        const items = tabViews.map(({title,component:TComponent}, index) => 
+        (<TComponent key={index} tabLabel={title} navigation={ this.props.navigation}/>));
         return (<View style={style.container}>
             <View style={style.header}>
                 <View style={style.location}>
-
                 </View>
                 <View style={style.search}>
                     <SearchTextBoxComponent />
@@ -35,7 +31,8 @@ class MoviePage extends Component {
             <ScrollableTabView
                 style={style.container}
                 tabBarActiveTextColor="#000"
-                tabBarTextStyle={style.tabBarText}>
+                tabBarTextStyle={style.tabBarText}
+               >
                 {items}
             </ScrollableTabView>
         </View>)
@@ -44,7 +41,7 @@ class MoviePage extends Component {
     }
 }
 
-export default connect(root => root.movieReducer)(MoviePage);
+// export default connect(root => root.movieReducer)(MoviePage);
 
 
 const style = StyleSheet.create({
