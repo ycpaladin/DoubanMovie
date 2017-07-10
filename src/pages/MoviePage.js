@@ -6,9 +6,12 @@ import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-vi
 import MovieListComponent from '../components/MioveListComponent';
 import TestComponent from '../components/TestComponent';
 import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
-import { TabPanelComponent, TabItem } from '../components/TabPanelComponent'
 
 class MoviePage extends Component {
+
+    static navigationOptions = ({nativgation})=>({
+        headerStyle:{ display:'none'},
+    });
 
     componentDidMount() {
         const { dispatch } = this.props;
@@ -17,7 +20,7 @@ class MoviePage extends Component {
 
     render() {
         // const { } = this.props;
-        const titles = ['正在热映', '即将上映', '不会上映'];
+        const titles = ['正在热映', '即将上映'];
         const items = titles.map((title, index) => (<MovieListComponent key={index} tabLabel={title} />))
 
         return (<View style={style.container}>
@@ -48,6 +51,8 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
+        // alignItems:'flex-start'
+        // borderWidth:1
     },
     header: {
         height: 54,
@@ -62,7 +67,8 @@ const style = StyleSheet.create({
         // borderWidth:1
     },
     tabBarText: {
-        marginTop:13
+        marginTop:13,
+        fontWeight:"100"
     },
     search: {
         flex: 1

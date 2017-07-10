@@ -34,14 +34,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     backgroundColor: '#F5FCFF',
+    // borderWidth:1
   },
-  list: {
-    flex: 1,
-    justifyContent: 'flex-start',
-  },
-  nav: {
-    height:40
-  }
 });
 
 AppRegistry.registerComponent('Test04', () => Test04);
