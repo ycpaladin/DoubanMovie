@@ -96,7 +96,7 @@ const Navigator = StackNavigator({
     },{
         navigationOptions:{
             headerBackTitle:null,
-            headerTintColor:'#000',
+            headerTintColor:'#fff',
             showIcon:true
         }
     });

@@ -13,7 +13,9 @@ export default class SearchTextBoxComponent extends Component{
 
 const style = StyleSheet.create({
     container: {
-        flex:1
+        flex:1,
+        justifyContent: 'center', 
+        alignContent:'center',
     },
     textBox: {
         height: 30,

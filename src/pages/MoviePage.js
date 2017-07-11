@@ -8,46 +8,44 @@ import UpcomingMovieList from '../components/UpcomingMovieComponent';
 import TestComponent from '../components/TestComponent';
 import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
 
-const tabViews = [{ title:'正在热映', component: HotMovieComponent},{ title:'即将上映', component:UpcomingMovieList }]
+const tabViews = [
+    { title:'正在热映', component: HotMovieComponent},
+    { title:'即将上映', component:UpcomingMovieList }];
 
 export default class MoviePage extends Component {
 
     static navigationOptions = ({nativgation})=>({
-        headerStyle:{ display:'none'},
+        headerLeft:(<View style={style.location}>
+                </View>),
+        headerRight:(<View style={{ flex:1, width:300, paddingRight:15}}>
+            <SearchTextBoxComponent />
+        </View>),
+        headerStyle:{  backgroundColor:'#fff'},
     });
-
     
     render() {
-        const items = tabViews.map(({title,component:TComponent}, index) => 
-        (<TComponent key={index} tabLabel={title} navigation={ this.props.navigation}/>));
-        return (<View style={style.container}>
-            <View style={style.header}>
-                <View style={style.location}>
-                </View>
-                <View style={style.search}>
-                    <SearchTextBoxComponent />
-                </View>
-            </View>
+        return (
             <ScrollableTabView
                 style={style.container}
                 tabBarActiveTextColor="#000"
                 tabBarTextStyle={style.tabBarText}
                >
-                {items}
+                {
+                    tabViews.map(({title,component:TComponent}, index)=>(
+                        <TComponent key={index} tabLabel={title} navigation={ this.props.navigation} />        
+                    ))
+                }
             </ScrollableTabView>
-        </View>)
-
-
+        );
     }
 }
-
-// export default connect(root => root.movieReducer)(MoviePage);
 
 
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'column',
+
+        // flexDirection: 'column',
         // alignItems:'flex-start'
         // borderWidth:1
     },
@@ -65,7 +63,8 @@ const style = StyleSheet.create({
     },
     tabBarText: {
         marginTop:13,
-        fontWeight:"100"
+        fontWeight:"100",
+        color:'#848484'
     },
     search: {
         flex: 1
