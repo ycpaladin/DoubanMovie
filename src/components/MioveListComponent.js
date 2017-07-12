@@ -14,7 +14,7 @@ export default class MovieListComponent extends Component {
         if (data === null || data === undefined) return null;
         const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         return (
-            <ListView dataSource={ds.cloneWithRows(data)} renderRow={this._renderRow.bind(this)} />
+            <ListView dataSource={ds.cloneWithRows(data)} renderRow={this._renderRow.bind(this)}/>
         )
     }
     

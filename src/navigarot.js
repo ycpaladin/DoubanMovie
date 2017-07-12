@@ -74,7 +74,8 @@ const TabScreen = TabNavigator({
                 tabBarIcon:({ focused,tintColor})=>(<Image source={require('./images/my.png')} style={style.icon}/>)
             })
         }
-    },{
+    },
+    {
         tabBarComponent: TabBarBottom,
         tabBarPosition: 'bottom',
         swipeEnabled: false, // 左右滑动的时候不切换
@@ -91,10 +92,14 @@ const TabScreen = TabNavigator({
 
 const Navigator = StackNavigator({
       Tab:{ 
-          screen:TabScreen
+          screen:TabScreen,
+         
         }      
-    },{
+    },
+   
+    {
         navigationOptions:{
+            
             headerBackTitle:null,
             headerTintColor:'#fff',
             showIcon:true
