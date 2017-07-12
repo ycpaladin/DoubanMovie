@@ -6,6 +6,8 @@ import color from './config/color';
 import MoviePage from './pages/MoviePage';
 import FindPage from './pages/FindPage';
 import MinePage from './pages/MinePage';
+import MovieDetialsPage from './pages/MovieDetialsPage';
+
 
 const lightContentScenes = ['Home', 'My'];
 
@@ -93,8 +95,10 @@ const TabScreen = TabNavigator({
 const Navigator = StackNavigator({
       Tab:{ 
           screen:TabScreen,
-         
-        }      
+        },
+        Detials:{
+            screen:MovieDetialsPage
+        }
     },
    
     {

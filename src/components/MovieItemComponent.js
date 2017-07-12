@@ -20,7 +20,7 @@ export default class MovieItemComponent extends Component{
 
     _onPress()  {
         const {navigation} = this.props;
-
+        navigation.navigate('Detials',{...this.props})
     }
 }
 

@@ -11,10 +11,13 @@ class HotMovieList extends Component {
         dispatch(getMovieList());
     }
 
-
     render(){
-        const { hot, isFetching, navigation} = this.props;
-        return (<MovieListComponent data={hot} isFetching={isFetching} navigation={navigation}/>)
+        const { hot, isFetching, navigation,dispatch} = this.props;
+        return (<MovieListComponent data={hot} isFetching={isFetching} navigation={navigation} onRefresh={
+            ()=>{
+                 dispatch(getMovieList());
+            }
+        }/>)
     }
 }
 

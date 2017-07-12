@@ -13,8 +13,8 @@ class UpcomingMovieList extends Component {
 
 
     render(){
-        const { upcoming, isFetching, navigation} = this.props;
-        return (<MovieListComponent data={upcoming} isFetching={isFetching}  navigation={navigation}/>)
+        const { upcoming, isFetching, navigation,dispatch} = this.props;
+        return (<MovieListComponent data={upcoming} isFetching={isFetching}  navigation={navigation} onRefresh={()=> dispatch(getUpcomingMovieList())}/>)
     }
 }
 
