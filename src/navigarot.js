@@ -103,9 +103,8 @@ const Navigator = StackNavigator({
    
     {
         navigationOptions:{
-            
             headerBackTitle:null,
-            headerTintColor:'#fff',
+            // headerTintColor:'#fff',
             showIcon:true
         }
     });

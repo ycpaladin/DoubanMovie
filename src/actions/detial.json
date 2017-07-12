@@ -1,0 +1,98 @@
+{
+    "rating": {
+        "max": 10,
+        "average": 0,
+        "stars": "00",
+        "min": 0
+    },
+    "reviews_count": 63,
+    "wish_count": 10577,
+    "douban_site": "",
+    "year": "2017",
+    "images": {
+        "small": "https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2490948849.webp",
+        "large": "https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2490948849.webp",
+        "medium": "https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2490948849.webp"
+    },
+    "alt": "https://movie.douban.com/subject/26811587/",
+    "id": "26811587",
+    "mobile_url": "https://movie.douban.com/subject/26811587/mobile",
+    "title": "大护法",
+    "do_count": null,
+    "share_url": "https://m.douban.com/movie/subject/26811587",
+    "seasons_count": null,
+    "schedule_url": "https://movie.douban.com/subject/26811587/cinema/",
+    "episodes_count": null,
+    "countries": [
+        "中国大陆"
+    ],
+    "genres": [
+        "喜剧",
+        "动作",
+        "动画"
+    ],
+    "collect_count": 728,
+    "casts": [
+        {
+            "alt": "https://movie.douban.com/celebrity/1345276/",
+            "avatars": {
+                "small": "https://img1.doubanio.com/img/celebrity/small/1471147748.38.jpg",
+                "large": "https://img1.doubanio.com/img/celebrity/large/1471147748.38.jpg",
+                "medium": "https://img1.doubanio.com/img/celebrity/medium/1471147748.38.jpg"
+            },
+            "name": "小连杀",
+            "id": "1345276"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1343032/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/1439298716.36.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/1439298716.36.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/1439298716.36.jpg"
+            },
+            "name": "图特哈蒙",
+            "id": "1343032"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1275482/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/32611.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/32611.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/32611.jpg"
+            },
+            "name": "金士杰",
+            "id": "1275482"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1376882/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/1499752210.51.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/1499752210.51.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/1499752210.51.jpg"
+            },
+            "name": "幽舞越山",
+            "id": "1376882"
+        }
+    ],
+    "current_season": null,
+    "original_title": "大护法",
+    "summary": "《大护法》是一部手绘山水背景，江湖风格的成人动画。奕卫国大护法为寻找失踪已久的太子，来到一个陌生小镇，小镇上空漂浮着一个巨大的黑色花生状球体，故名为花生镇。这里的居民外形酷似花生，当身上长出鬼蘑菇时便会被守卫枪决。他们反对一切外来事物，麻木而愚昧。在躲避守卫追杀的过程中，大护法偶遇太子，并一同卷入了一场关于欲望的冒险故事。",
+    "subtype": "movie",
+    "directors": [
+        {
+            "alt": "https://movie.douban.com/celebrity/1358697/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/1493285970.66.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/1493285970.66.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/1493285970.66.jpg"
+            },
+            "name": "不思凡",
+            "id": "1358697"
+        }
+    ],
+    "comments_count": 462,
+    "ratings_count": 712,
+    "aka": [
+        "大护法之黑花生"
+    ]
+}
