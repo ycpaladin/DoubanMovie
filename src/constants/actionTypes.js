@@ -10,7 +10,9 @@ const actionTypes = keyMirror({
     // 获取电影详情完成
     GET_MOVIE_DETAILS_COMPLETED:null,
     // 获取电影详情失败
-    GET_MOVIE_DETAILS_FAIL:null
+    GET_MOVIE_DETAILS_FAIL:null,
+
+    INIT_MOVIE_DETAILS:null
 
 });
 

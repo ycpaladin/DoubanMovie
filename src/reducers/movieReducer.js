@@ -24,6 +24,7 @@ export function movieReducer(state = defaultState, action) {
                 isFetching: false,
                 upcoming: action.payload.data.subjects
             });
+        
         default:
             return state;
     }

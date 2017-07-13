@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ListView, Text, Image,ScrollView, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { ListView, Text, Image,ScrollView, View, StyleSheet, TouchableOpacity, BackHandler } from 'react-native';
 import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
-import { getMovieDetailsById } from '../actions/movieActions';
+import { getMovieDetailsById,initMovieDetails } from '../actions/movieActions';
 import {connect} from 'react-redux';
 
 class MovieDetailsPage extends Component{
@@ -15,15 +15,34 @@ class MovieDetailsPage extends Component{
         }
     })
 
+    constructor(props){
+        super(props);
+        this._onBack = this._onBack.bind(this);
+    }
+
 
     componentDidMount(){
-        const {id, dispatch } = this.props;
-        dispatch(getMovieDetailsById(id));
+        const {dispatch,navigation:{state:{ params:{id}} } } = this.props;
+        if(this.props.movie === null ){
+            dispatch(getMovieDetailsById(id));
+        }
+        
+        BackHandler.addEventListener('hardwareBackPress',this._onBack)
+    }
+
+    componentWillUnmount(){
+        BackHandler.removeEventListener('hardwareBackPress',this._onBack)
+    }
+
+    _onBack (){
+        const {dispatch,navigation:{state:{ params:{id}} } } = this.props;
+        console.log(id,'=====>')
+        dispatch(initMovieDetails());
     }
 
     render(){
-        const { isFetching, movie } = this.props;
-        if(isFetching === true){
+        const { isFetching, movie,navigation:{state:{ params:{id}} } } = this.props;
+        if(isFetching === true && movie === null) {
             return null;
         }
 
