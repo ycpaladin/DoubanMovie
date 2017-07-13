@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { ListView, Text, Image,ScrollView, View, StyleSheet, TouchableOpacity } from 'react-native';
 import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
-export default class MovieDetialsPage extends Component{
+import { getMovieDetailsById } from '../actions/movieActions';
+import {connect} from 'react-redux';
+
+class MovieDetailsPage extends Component{
 
     static navigationOptions = ({navigation})=>({
         title:'电影',
@@ -11,8 +14,20 @@ export default class MovieDetialsPage extends Component{
             alignSelf:'center'
         }
     })
+
+
+    componentDidMount(){
+        const {id, dispatch } = this.props;
+        dispatch(getMovieDetailsById(id));
+    }
+
     render(){
-        const { title,images: { large },year,genres = [],directors,casts} = this.props.navigation.state.params;
+        const { isFetching, movie } = this.props;
+        if(isFetching === true){
+            return null;
+        }
+
+        const { title, images:{large}, genres, year } = movie;
         const _genres = [].join.call(genres,' / ');
         return (<ScrollView style={style.container}>
             <View style={style.topImage}>
@@ -41,6 +56,7 @@ export default class MovieDetialsPage extends Component{
     }
 }
 
+export default connect(root=>root.movieDetailsReducer)(MovieDetailsPage);
 
 const style = StyleSheet.create({
     container: {
