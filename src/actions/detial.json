@@ -1,12 +1,12 @@
 {
     "rating": {
         "max": 10,
-        "average": 0,
-        "stars": "00",
+        "average": 8,
+        "stars": "40",
         "min": 0
     },
-    "reviews_count": 63,
-    "wish_count": 10577,
+    "reviews_count": 357,
+    "wish_count": 13920,
     "douban_site": "",
     "year": "2017",
     "images": {
@@ -31,7 +31,7 @@
         "动作",
         "动画"
     ],
-    "collect_count": 728,
+    "collect_count": 11028,
     "casts": [
         {
             "alt": "https://movie.douban.com/celebrity/1345276/",
@@ -90,8 +90,8 @@
             "id": "1358697"
         }
     ],
-    "comments_count": 462,
-    "ratings_count": 712,
+    "comments_count": 6468,
+    "ratings_count": 10700,
     "aka": [
         "大护法之黑花生"
     ]

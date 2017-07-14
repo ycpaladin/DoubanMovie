@@ -74,20 +74,33 @@ export function getUpcomingMovieList(citycode = '北京'){
 }
 
 
-export  function getMovieDetailsById(id, force = false){
+export function getMovieDetailsById(id, force = false){
     return async dispatch => {
-        storage.clearMap();
-        const data = await storage.load({
-            key:'movie',
-            id,
-            syncParams:{
-                id
-            }
-        });
-
-        dispatch({type:GET_MOVIE_DETAILS_COMPLETED,payload:data});
+        try{
+            dispatch({ type: GET_MOVIE_DETAILS_FETCHING});
+            const res = await fetch(`https://api.douban.com/v2/movie/subject/${id}`);
+            const data = await res.json();
+            dispatch({type:GET_MOVIE_DETAILS_COMPLETED, payload:{ id,data}});
+        }catch(error){
+            dispatch({type:GET_MOVIE_DETAILS_FAIL, payload:error});
+        }
     }
 }
+
+// export  function getMovieDetailsById(id, force = false){
+//     return async dispatch => {
+//         storage.clearMap();
+//         const data = await storage.load({
+//             key:'movie',
+//             id,
+//             syncParams:{
+//                 id
+//             }
+//         });
+
+//         dispatch({type:GET_MOVIE_DETAILS_COMPLETED,payload:data});
+//     }
+// }
 
 
 

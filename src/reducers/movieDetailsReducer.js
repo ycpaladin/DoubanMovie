@@ -1,4 +1,5 @@
 import actionTypes from '../constants/actionTypes';
+import { Map} from 'immutable';
 const {
     // 正在获取电影详情
     GET_MOVIE_DETAILS_FETCHING, 
@@ -11,8 +12,8 @@ const {
 } = actionTypes;
 
 const defaultState = {
-    isFetching:true,
-    movie:null,
+    isFetching:false,
+    movie: {},
     error:null
 }
 
@@ -22,7 +23,9 @@ export function movieDetailsReducer(state = defaultState, action){
         case GET_MOVIE_DETAILS_FETCHING:
             return Object.assign({}, state, {isFetching:true});
         case GET_MOVIE_DETAILS_COMPLETED:
-            return Object.assign({}, state, {isFetching:false, movie:action.payload});
+            const { id, data} = action.payload;
+            state.movie[id] = data;
+            return Object.assign({}, state, {isFetching:false});
         case GET_MOVIE_DETAILS_FAIL:
             return Object.assign({}, state, {isFetching:false, error: action.payload.error});
         case INIT_MOVIE_DETAILS:
