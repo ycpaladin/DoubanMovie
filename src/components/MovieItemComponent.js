@@ -29,6 +29,7 @@ const style = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'flex-start',
+        backgroundColor:'#fff',
         // alignItems:'flex-start',
         padding: 5,
         height: 150,

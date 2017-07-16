@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { ListView, Text, Image, View, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { Image, View, StyleSheet } from 'react-native';
 
 
 export default class RatingComponent extends Component{
@@ -8,20 +8,16 @@ export default class RatingComponent extends Component{
     render() {
         // max 最高分， min=最低分， average=平均分 ，stars=stars
         const {max,min,average =  1,stars} = this.props;
-//          "max": 10,
-//         "average": 0,
-//         "stars": "00",
-//         "min": 0
-        const x = 7;
-        const starCount = (+(x.toFixed(0))) / 2;
+        const starCount = (+(average.toFixed(0))) / 2;
         const images = [1,2,3,4,5].map((item, index)=>{
-            if(item <= starCount){
-                if(starCount % item === 0)
+            if(item > starCount){
+                if(item - starCount === 0.5){
                     return (<Image key={index} style={style.img} source={ require('../images/star1.png')}/>); //半星
-                else
-                    return (<Image key={index} style={style.img} source={ require('../images/star2.png')}/>); // 全星
+                }else{
+                    return (<Image key={index} style={style.img} source={ require('../images/star3.png')}/>); // 空星
+                }
             }else{
-                return (<Image key={index} style={style.img} source={ require('../images/star3.png')}/>); // 空星
+                return (<Image key={index} style={style.img} source={ require('../images/star2.png')}/>); 
             }
         });
         return (<View style={style.container}>
@@ -32,12 +28,14 @@ export default class RatingComponent extends Component{
 
 const style = StyleSheet.create({
     container:{
-        flex:1,
-         backgroundColor:'red',
+        height:30,
         flexDirection: 'row',
+        alignItems:'center',
+        justifyContent: 'center',
     },
     img:{
         width:15,
         height:15,
+        
     }
 })
