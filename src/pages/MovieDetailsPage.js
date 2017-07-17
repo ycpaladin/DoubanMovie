@@ -164,8 +164,9 @@ const style = StyleSheet.create({
         // borderWidth:1 / PixelRatio.get(),
     },
     person:{
-        height:100,
-        borderWidth:1 / PixelRatio.get(),
+        height:120,
+        // borderWidth:1 / PixelRatio.get(),
+        marginBottom:15,
     },
     btns:{
         height:80,
