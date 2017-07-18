@@ -12,8 +12,11 @@ const actionTypes = keyMirror({
     // 获取电影详情失败
     GET_MOVIE_DETAILS_FAIL:null,
 
-    INIT_MOVIE_DETAILS:null
+    INIT_MOVIE_DETAILS:null,
 
+    GET_ACTOR_FETCHING:null,
+    GET_ACTOR_COMPLETED:null,
+    GET_ACTOR_FAIL:null,
 });
 
 export default actionTypes;

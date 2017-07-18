@@ -1,0 +1,267 @@
+[
+  {
+    "type": "导演 Director",
+    "users": [
+      {
+        "name": "路阳 Yang Lu",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/59201.jpg",
+        "role": "",
+        "works": [
+          "绣春刀",
+          "绣春刀II：修罗战场",
+          "解忧公主"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "演员 Actor/Actress",
+    "users": [
+      {
+        "name": "张震 Chen Chang",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/1453574419.48.jpg",
+        "role": "沈炼",
+        "works": [
+          "一代宗师",
+          "春光乍泄",
+          "绣春刀"
+        ]
+      },
+      {
+        "name": "杨幂 Mi Yang",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/37843.jpg",
+        "role": "北斋",
+        "works": [
+          "春娇与志明",
+          "小时代",
+          "分手大师"
+        ]
+      },
+      {
+        "name": "张译 Yi Zhang",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/25943.jpg",
+        "role": "陆文昭",
+        "works": [
+          "老炮儿",
+          "亲爱的",
+          "搜索"
+        ]
+      },
+      {
+        "name": "雷佳音 Jiayin Lei",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/1454395377.49.jpg",
+        "role": "裴纶",
+        "works": [
+          "心花路放",
+          "黄金大劫案",
+          "龙门镖局"
+        ]
+      },
+      {
+        "name": "辛芷蕾 Zhilei Xin",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/56930.jpg",
+        "role": "丁白缨",
+        "works": [
+          "长江图",
+          "不可思异",
+          "少年"
+        ]
+      },
+      {
+        "name": "金士杰 Shih-Chieh King",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/32611.jpg",
+        "role": "魏忠贤",
+        "works": [
+          "乘风破浪",
+          "一代宗师",
+          "唐人街探案"
+        ]
+      },
+      {
+        "name": "刘端端 Duanduan Liu",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/1500202090.03.jpg",
+        "role": "朱由检",
+        "works": [
+          "绣春刀II：修罗战场"
+        ]
+      },
+      {
+        "name": "武强 Qiang Wu",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/1441868426.58.jpg",
+        "role": "凌云铠",
+        "works": [
+          "绣春刀II：修罗战场",
+          "贞观长歌",
+          "解忧公主"
+        ]
+      },
+      {
+        "name": "杨轶 Yi Yang",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/h3dDJF5XGEccel_avatar_uploaded1408700787.58.jpg",
+        "role": "殷澄",
+        "works": [
+          "中国合伙人",
+          "绣春刀",
+          "绣春刀II：修罗战场"
+        ]
+      },
+      {
+        "name": "李媛 Yuan Li",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/1439792310.44.jpg",
+        "role": "丁翀",
+        "works": [
+          "滚蛋吧！肿瘤君",
+          "奋斗",
+          "高跟鞋先生"
+        ]
+      },
+      {
+        "name": "吴晓亮 Xiaoliang Wu",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/43477.jpg",
+        "role": "丁泰",
+        "works": [
+          "绣春刀II：修罗战场",
+          "风车",
+          "青春期"
+        ]
+      },
+      {
+        "name": "李洪涛 Hongtao Li",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/39100.jpg",
+        "role": "许显纯",
+        "works": [
+          "康熙王朝",
+          "大宅门",
+          "白鹿原"
+        ]
+      },
+      {
+        "name": "刘峰超 Fengchao Liu",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/1411104806.39.jpg",
+        "role": "郑掌班",
+        "works": [
+          "孔子",
+          "水浒传",
+          "画江湖之不良人"
+        ]
+      },
+      {
+        "name": "袁文康 Wenkang Yuan",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/6464.jpg",
+        "role": "静海",
+        "works": [
+          "集结号",
+          "黄金时代",
+          "北京爱情故事"
+        ]
+      },
+      {
+        "name": "马赫 He Ma",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/1490777743.33.jpg",
+        "role": "田尔耕",
+        "works": [
+          "绣春刀II：修罗战场",
+          "花红花火"
+        ]
+      },
+      {
+        "name": "刘亭作 Tingzuo Liu",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/1358842255.19.jpg",
+        "role": "郭真",
+        "works": [
+          "血色浪漫",
+          "虎妈猫爸",
+          "小丈夫"
+        ]
+      },
+      {
+        "name": "姜晓冲 Xiaozhong Jiang",
+        "avatar": "https://img1.doubanio.com/img/celebrity/medium/52177.jpg",
+        "role": "姜小牙",
+        "works": [
+          "心术",
+          "绣春刀II：修罗战场",
+          "今夜天使降临"
+        ]
+      },
+      {
+        "name": "陈齐威 Qiwei Chen",
+        "avatar": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
+        "role": "定安",
+        "works": [
+          "绣春刀II：修罗战场"
+        ]
+      },
+      {
+        "name": "王仁君 Renjun Wang",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/1463218674.81.jpg",
+        "role": "朱由校",
+        "works": [
+          "大军师司马懿之军师联盟",
+          "亲爱的翻译官",
+          "少帅"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "编剧 Writer",
+    "users": [
+      {
+        "name": "陈舒 Shu Chen",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/40542.jpg",
+        "role": "",
+        "works": [
+          "绣春刀",
+          "恋爱中的城市",
+          "极速天使"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "制片 Producer",
+    "users": [
+      {
+        "name": "宁浩 Hao Ning",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/43740.jpg",
+        "role": "",
+        "works": [
+          "老炮儿",
+          "疯狂的石头",
+          "无人区"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "作曲 Composer",
+    "users": [
+      {
+        "name": "川井宪次 Kenji Kawai",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/25183.jpg",
+        "role": "",
+        "works": [
+          "叶问2：宗师传奇",
+          "死亡笔记",
+          "攻壳机动队"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "服装设计 Costume Designer",
+    "users": [
+      {
+        "name": "梁婷婷 Tingting Liang",
+        "avatar": "https://img3.doubanio.com/img/celebrity/medium/1467114143.02.jpg",
+        "role": "",
+        "works": [
+          "绣春刀",
+          "厨子戏子痞子",
+          "红色"
+        ]
+      }
+    ]
+  }
+]
