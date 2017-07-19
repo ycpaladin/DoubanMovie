@@ -6,6 +6,14 @@ import { getActorList} from '../actions/actorAction';
 
 class ActorListPage extends Component {
 
+    static navigationOptions = ({navigation})=>({
+        title:'全部影人',
+        headerTintColor:'#fff',
+        headerStyle:{  backgroundColor:'#848484', elevation:0, shadowOpacity:0,},
+        headerTitleStyle:{
+            alignSelf:'center'
+        }
+    })    
     componentDidMount(){
         const { dispatch }  =this.props;
         dispatch(getActorList());
@@ -61,14 +69,14 @@ class ActorListPage extends Component {
 
     _renderHeader({type, length},sectionId,rowId){
         return (<View style={style.header}>
-            <Text>{sectionId} {length}</Text>
+            <Text style={style.headerText}>{sectionId} {length}</Text>
         </View>)
     }
 }
 
 const style = StyleSheet.create({
     header:{
-        height:40,
+        height: 30,
         paddingLeft:10,
         justifyContent: 'center',
         backgroundColor:'#ccc'
@@ -97,6 +105,10 @@ const style = StyleSheet.create({
     text:{
         flex:1,
         marginLeft:10
+    },
+    headerText: {
+        flex: 1,
+        lineHeight:30
     }
 })
 
