@@ -7,6 +7,8 @@ import MoviePage from './pages/MoviePage';
 import FindPage from './pages/FindPage';
 import MinePage from './pages/MinePage';
 import MovieDetailsPage from './pages/MovieDetailsPage';
+import ActorListPage from './pages/ActorListPage';
+
 
 
 const lightContentScenes = ['Home', 'My'];
@@ -98,6 +100,9 @@ const Navigator = StackNavigator({
         },
         Detials:{
             screen:MovieDetailsPage
+        },
+        ActorList:{
+            screen:ActorListPage
         }
     },
    

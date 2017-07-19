@@ -37,7 +37,8 @@ export default class ActorListComponent extends Component {
     }
 
     _onPress(id){
-        console.log(id)
+         const {navigation} = this.props;
+            navigation.navigate('ActorList',{id})
     }
 
     renerLinkToAll(){

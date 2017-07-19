@@ -94,7 +94,7 @@ class MovieDetailsPage extends Component{
                 </Text>
             </View>
             <View style={style.person}>
-                <ActorListComponent data={[...directors,...casts]}/>
+                <ActorListComponent data={[...directors,...casts]} navigation={this.props.navigation}/>
 
             </View>
         </ScrollView>)
