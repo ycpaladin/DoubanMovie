@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { ListView, Text, Image, View, StyleSheet, TouchableOpacity , PixelRatio} from 'react-native';
 import { connect } from 'react-redux';
 import { getActorList} from '../actions/actorAction';
 
@@ -8,8 +8,8 @@ class ActorListPage extends Component {
 
     static navigationOptions = ({navigation})=>({
         title:'全部影人',
-        headerTintColor:'#fff',
-        headerStyle:{  backgroundColor:'#848484', elevation:0, shadowOpacity:0,},
+        headerTintColor:'#848484',
+        headerStyle:{  backgroundColor:'#fff', elevation:0, shadowOpacity:0,},
         headerTitleStyle:{
             alignSelf:'center'
         }
@@ -53,23 +53,29 @@ class ActorListPage extends Component {
         />)
     }
 
-    _renderRow({ id, avatar, name},sectionId, rowId){
-        // const rows = rowData.map(({ id,name,avatar},index)=>{
-        //     return (<View  style={style.row} key={id}>
-        //         <Image source={ {uri:avatar}}  style={style.img}/>
-        //         <Text style={style.text}>{name}</Text>
-        //     </View>)
-        // });
-        
-        return (<View  style={style.row} key={id}>
-                <Image source={ {uri:avatar}}  style={style.img}/>
-                <Text style={style.text}>{name}</Text>
-            </View>)
+    _renderRow({ id, avatar, name, enName, role},sectionId, rowId){
+        return (
+                <TouchableOpacity style={style.row}  key={id} onPress={ this._onPress.bind(this, id)}>
+                    <Image source={ {uri:avatar}}  style={style.img}/>
+                    <View style={style.right}>
+                        <Text style={style.text}>{name}</Text>
+                        <Text style={[style.text]}>{enName}</Text>
+                        <View  style={[style.roleView, role === '' ? style.hide:null]}>
+                            <Text style={style.roleText}>饰   {role}</Text>
+                        </View>
+                        
+                    </View>
+                </TouchableOpacity>
+            )
+    }
+
+    _onPress(id){
+        console.log(id);
     }
 
     _renderHeader({type, length},sectionId,rowId){
         return (<View style={style.header}>
-            <Text style={style.headerText}>{sectionId} {length}</Text>
+            <Text>{sectionId} {length}</Text>
         </View>)
     }
 }
@@ -78,38 +84,54 @@ const style = StyleSheet.create({
     header:{
         height: 30,
         paddingLeft:10,
-        justifyContent: 'center',
+        flexDirection:'row',
+        // justifyContent: 'center',
+        alignItems:'center',
         backgroundColor:'#ccc'
     },
     row:{
-        paddingLeft:10,
-        height:150,
+        height:160,
         flexDirection: 'row',
         paddingTop:10,
-        paddingBottom:5
+        paddingBottom:15,
+        marginLeft:20,
+        marginRight:20,
+        borderBottomWidth: 1/ PixelRatio.get(),
+        borderBottomColor:'#ccc'
         //  backgroundColor:'red'
         // marginBottom:10,
-    },
-    container:{
-        flex:1,
-        flexDirection: 'column',
-        backgroundColor:'#fff',
-        // justifyContent: 'flex-start',
-        // alignItems:'flex-start'
     },
     img:{
         // flex:1,
         width:100,
         resizeMode: Image.resizeMode.contain,
     },
-    text:{
+    right:{
         flex:1,
-        marginLeft:10
+        flexDirection: 'column',
+        // alignItems:'flex-end',
+        // justifyContent:'flex-end',
+        // backgroundColor:'red',
+        paddingLeft:15,
     },
-    headerText: {
-        flex: 1,
-        lineHeight:30
+    text:{
+        height:30,
+        // backgroundColor:'red',
+        // marginLeft:10
+    },
+    hide:{
+        display:'none'
+    },
+    roleView:{
+        flex:1,
+        justifyContent:'flex-end',
+        
+    },
+    roleText:{
+        fontSize:12
     }
+
+   
 })
 
 

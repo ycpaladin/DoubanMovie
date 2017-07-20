@@ -1,10 +1,12 @@
 [
   {
     "type": "导演",
+    "typeOfEn": "Director",
     "users": [
       {
         "id": "1321200",
-        "name": "路阳 Yang Lu",
+        "name": "路阳",
+        "enName": "Yang Lu",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/59201.jpg",
         "role": "",
         "works": [
@@ -26,10 +28,12 @@
   },
   {
     "type": "演员",
+    "typeOfEn": "Actor/Actress",
     "users": [
       {
         "id": "1077991",
-        "name": "张震 Chen Chang",
+        "name": "张震",
+        "enName": "Chen Chang",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/1453574419.48.jpg",
         "role": "沈炼",
         "works": [
@@ -49,7 +53,8 @@
       },
       {
         "id": "1052359",
-        "name": "杨幂 Mi Yang",
+        "name": "杨幂",
+        "enName": "Mi Yang",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/37843.jpg",
         "role": "北斋",
         "works": [
@@ -69,7 +74,8 @@
       },
       {
         "id": "1274761",
-        "name": "张译 Yi Zhang",
+        "name": "张译",
+        "enName": "Yi Zhang",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/25943.jpg",
         "role": "陆文昭",
         "works": [
@@ -89,7 +95,8 @@
       },
       {
         "id": "1312940",
-        "name": "雷佳音 Jiayin Lei",
+        "name": "雷佳音",
+        "enName": "Jiayin Lei",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/1454395377.49.jpg",
         "role": "裴纶",
         "works": [
@@ -109,7 +116,8 @@
       },
       {
         "id": "1318720",
-        "name": "辛芷蕾 Zhilei Xin",
+        "name": "辛芷蕾",
+        "enName": "Zhilei Xin",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/56930.jpg",
         "role": "丁白缨",
         "works": [
@@ -129,7 +137,8 @@
       },
       {
         "id": "1275482",
-        "name": "金士杰 Shih-Chieh King",
+        "name": "金士杰",
+        "enName": "Shih-Chieh King",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/32611.jpg",
         "role": "魏忠贤",
         "works": [
@@ -149,7 +158,8 @@
       },
       {
         "id": "1376605",
-        "name": "刘端端 Duanduan Liu",
+        "name": "刘端端",
+        "enName": "Duanduan Liu",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/1500202090.03.jpg",
         "role": "朱由检",
         "works": [
@@ -161,7 +171,8 @@
       },
       {
         "id": "1351719",
-        "name": "武强 Qiang Wu",
+        "name": "武强",
+        "enName": "Qiang Wu",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/1441868426.58.jpg",
         "role": "凌云铠",
         "works": [
@@ -181,7 +192,8 @@
       },
       {
         "id": "1342478",
-        "name": "杨轶 Yi Yang",
+        "name": "杨轶",
+        "enName": "Yi Yang",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/h3dDJF5XGEccel_avatar_uploaded1408700787.58.jpg",
         "role": "殷澄",
         "works": [
@@ -201,7 +213,8 @@
       },
       {
         "id": "1314374",
-        "name": "李媛 Yuan Li",
+        "name": "李媛",
+        "enName": "Yuan Li",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/1439792310.44.jpg",
         "role": "丁翀",
         "works": [
@@ -221,7 +234,8 @@
       },
       {
         "id": "1315721",
-        "name": "吴晓亮 Xiaoliang Wu",
+        "name": "吴晓亮",
+        "enName": "Xiaoliang Wu",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/43477.jpg",
         "role": "丁泰",
         "works": [
@@ -241,7 +255,8 @@
       },
       {
         "id": "1317230",
-        "name": "李洪涛 Hongtao Li",
+        "name": "李洪涛",
+        "enName": "Hongtao Li",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/39100.jpg",
         "role": "许显纯",
         "works": [
@@ -261,7 +276,8 @@
       },
       {
         "id": "1332806",
-        "name": "刘峰超 Fengchao Liu",
+        "name": "刘峰超",
+        "enName": "Fengchao Liu",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/1411104806.39.jpg",
         "role": "郑掌班",
         "works": [
@@ -281,7 +297,8 @@
       },
       {
         "id": "1274820",
-        "name": "袁文康 Wenkang Yuan",
+        "name": "袁文康",
+        "enName": "Wenkang Yuan",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/6464.jpg",
         "role": "静海",
         "works": [
@@ -301,7 +318,8 @@
       },
       {
         "id": "1371225",
-        "name": "马赫 He Ma",
+        "name": "马赫",
+        "enName": "He Ma",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/1490777743.33.jpg",
         "role": "田尔耕",
         "works": [
@@ -317,7 +335,8 @@
       },
       {
         "id": "1326377",
-        "name": "刘亭作 Tingzuo Liu",
+        "name": "刘亭作",
+        "enName": "Tingzuo Liu",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/1358842255.19.jpg",
         "role": "郭真",
         "works": [
@@ -337,7 +356,8 @@
       },
       {
         "id": "1322077",
-        "name": "姜晓冲 Xiaozhong Jiang",
+        "name": "姜晓冲",
+        "enName": "Xiaozhong Jiang",
         "avatar": "https://img1.doubanio.com/img/celebrity/medium/52177.jpg",
         "role": "姜小牙",
         "works": [
@@ -357,7 +377,8 @@
       },
       {
         "id": "1376606",
-        "name": "陈齐威 Qiwei Chen",
+        "name": "陈齐威",
+        "enName": "Qiwei Chen",
         "avatar": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
         "role": "定安",
         "works": [
@@ -369,7 +390,8 @@
       },
       {
         "id": "1319834",
-        "name": "王仁君 Renjun Wang",
+        "name": "王仁君",
+        "enName": "Renjun Wang",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/1463218674.81.jpg",
         "role": "朱由校",
         "works": [
@@ -391,10 +413,12 @@
   },
   {
     "type": "编剧",
+    "typeOfEn": "Writer",
     "users": [
       {
         "id": "1317594",
-        "name": "陈舒 Shu Chen",
+        "name": "陈舒",
+        "enName": "Shu Chen",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/40542.jpg",
         "role": "",
         "works": [
@@ -416,10 +440,12 @@
   },
   {
     "type": "制片",
+    "typeOfEn": "Producer",
     "users": [
       {
         "id": "1274265",
-        "name": "宁浩 Hao Ning",
+        "name": "宁浩",
+        "enName": "Hao Ning",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/43740.jpg",
         "role": "",
         "works": [
@@ -441,10 +467,12 @@
   },
   {
     "type": "作曲",
+    "typeOfEn": "Composer",
     "users": [
       {
         "id": "1048442",
-        "name": "川井宪次 Kenji Kawai",
+        "name": "川井宪次",
+        "enName": "Kenji Kawai",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/25183.jpg",
         "role": "",
         "works": [
@@ -466,10 +494,12 @@
   },
   {
     "type": "服装设计",
+    "typeOfEn": "Costume Designer",
     "users": [
       {
         "id": "1359356",
-        "name": "梁婷婷 Tingting Liang",
+        "name": "梁婷婷",
+        "enName": "Tingting Liang",
         "avatar": "https://img3.doubanio.com/img/celebrity/medium/1467114143.02.jpg",
         "role": "",
         "works": [
