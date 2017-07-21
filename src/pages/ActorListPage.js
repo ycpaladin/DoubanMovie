@@ -71,6 +71,9 @@ class ActorListPage extends Component {
 
     _onPress(id){
         console.log(id);
+        const { navigation} = this.props;
+        navigation.navigate('Celebrity',{id})
+        //Celebrity
     }
 
     _renderHeader({type, length},sectionId,rowId){

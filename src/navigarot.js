@@ -8,6 +8,7 @@ import FindPage from './pages/FindPage';
 import MinePage from './pages/MinePage';
 import MovieDetailsPage from './pages/MovieDetailsPage';
 import ActorListPage from './pages/ActorListPage';
+import CelebrityPage from './pages/CelebrityPage';
 
 
 
@@ -103,6 +104,9 @@ const Navigator = StackNavigator({
         },
         ActorList:{
             screen:ActorListPage
+        },
+        Celebrity:{
+            screen: CelebrityPage
         }
     },
    
