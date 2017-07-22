@@ -1,53 +1,46 @@
 import React, { Component } from 'react';
-import { Image, View, StyleSheet,Text, ListView,TouchableOpacity,PixelRatio } from 'react-native';
-
+import { Image, View, StyleSheet,Text, PixelRatio } from 'react-native';
+import { HorizontalListView} from './HorizontalListView';
 
 export default class ActorListComponent extends Component {
 
     render(){
-
         const { data = [] }  = this.props;
-        const items = data.map(({id,name},index)=>
-             (<Text key={id}>{name}</Text>)
-        );
         if(data === null || data === undefined) return null;
         data.push({
             avatars:{}
         })
-        const ds = new ListView.DataSource({ rowHasChanged:(r1,r2)=> r1 !== r2});
-        return (<ListView 
-            horizontal={true}
-            dataSource={ds.cloneWithRows(data)}
-            renderRow={ this._renderRow.bind(this)}
-
+        return (<HorizontalListView  
+            data={data}
+            renderRow={ this._renderRow}
+            onRowPress={this._onPress.bind(this)}
+            renderLinkToAll={this._renerLinkToAll}
         />);
     }
 
 
     _renderRow ({avatars:{large},name,id}){
-        if(large === undefined){
-            return this.renerLinkToAll();
-        }
-        return (<TouchableOpacity onPress={this._onPress.bind(this, id)}>
-            <View style={ style.row} >
+        return (<View style={ style.row} >
                 <Image source={{ uri:large}} style={style.img}/>
                 <Text style={style.text} numberOfLines={1}>{ name}</Text>
-            </View>
-        </TouchableOpacity>)
+            </View>)
     }
 
-    _onPress(id){
-         const {navigation} = this.props;
-            navigation.navigate('ActorList',{id})
-    }
-
-    renerLinkToAll(){
-         return (<TouchableOpacity onPress={this._onPress.bind(this, undefined)}>
-            <View style={ [style.row]} >
+    _renerLinkToAll(){
+         return (<View style={style.row} >
                 <Text style={[style.text,style.all]}>查看所有演员</Text>
                 <Text style={style.text}>　</Text>
-            </View>
-        </TouchableOpacity>)
+            </View>)
+    }
+
+    _onPress({ id}){
+         const {navigation} = this.props;
+         if(id !== undefined){ //如果ID不为undefined，则跳转到显示影人的页面
+            navigation.navigate('Celebrity',{id})
+         }else{
+             navigation.navigate('ActorList'); // 跳转到显示所有影人的页面，
+         }
+            
     }
 }
 

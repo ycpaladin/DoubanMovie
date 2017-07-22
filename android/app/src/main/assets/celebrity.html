@@ -11,8 +11,18 @@
     <div id="container">
         <h1>Hellow, WebView！</h1>
     </div>
-    <script type="text/javascript">
-        alert('hi.');
+   <script type="text/javascript">
+        
+
+        class xxx{
+            constructor(){
+                this.a = "kevin"
+            }
+        }
+
+        var x = new xxx();
+        console.log(x.a);
+        document.getElementById('container').innerText = x.a;
     </script>
 </body>
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, Text, Image,ScrollView, View, StyleSheet, TouchableOpacity, BackHandler,PixelRatio ,TouchableHighlight} from 'react-native';
+import { ListView, Text, Image,ScrollView, View, StyleSheet, TouchableOpacity,PixelRatio} from 'react-native';
 // import SearchTextBoxComponent from '../components/SearchTextBoxComponent';
 import RatingComponent from '../components/RatingComponent';
 import ActorListComponent from '../components/ActorListComponent';
@@ -17,11 +17,6 @@ class MovieDetailsPage extends Component{
         }
     })
 
-    // constructor(props){
-    //     super(props);
-    //     this._onBack = this._onBack.bind(this);
-    // }
-
 
     componentDidMount(){
         // const { } = this.props;
@@ -30,18 +25,8 @@ class MovieDetailsPage extends Component{
             dispatch(getMovieDetailsById(id));
         }
         
-        // BackHandler.addEventListener('hardwareBackPress',this._onBack)
     }
 
-    // componentWillUnmount(){
-    //     BackHandler.removeEventListener('hardwareBackPress',this._onBack)
-    // }
-
-    // _onBack (){
-    //     const {dispatch,navigation:{state:{ params:{id}} } } = this.props;
-    //     console.log(id,'=====>')
-    //     dispatch(initMovieDetails());
-    // }
 
     render(){
         const { isFetching, movie,navigation:{state:{ params:{id}} } } = this.props;
@@ -72,20 +57,20 @@ class MovieDetailsPage extends Component{
                 </View>
             </View>
             <View style={style.btns}>
-                <TouchableHighlight style={ style.leftBtn}>
+                <TouchableOpacity style={ style.leftBtn}>
                     <Text style={style.textInBtn}>想看</Text>
-                </TouchableHighlight>
-                <TouchableHighlight style={ style.rightBtn}>
+                </TouchableOpacity>
+                <TouchableOpacity style={ style.rightBtn}>
                     <Text style={style.textInBtn}>看过</Text>
-                </TouchableHighlight>
+                </TouchableOpacity>
             </View>
             <View style={style.buy}>
-                <TouchableHighlight>
+                <TouchableOpacity>
                     <View style={{ flexDirection:'row'}}>
                         <Text style={style.buytitle}>选座购票</Text>
                         <Text style={style.price}>￥33起</Text>
                     </View>
-                </TouchableHighlight>
+                </TouchableOpacity>
             </View>
             <View style={style.description}>
                 <Text>剧情简介</Text>
@@ -204,7 +189,7 @@ const style = StyleSheet.create({
         borderBottomWidth:1 / PixelRatio.get(),
         marginLeft:10,
         marginRight:10,
-        borderColor:'#848484'
+        borderColor:'#ccc'
     },buytitle:{
         fontSize:12,
 
