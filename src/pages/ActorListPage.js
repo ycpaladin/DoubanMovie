@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { getActorList} from '../actions/actorAction';
 
 
+// require('ErrorUtils').setGlobalHandler(function (error) {
+//     console.log(error);
+// })
+
 class ActorListPage extends Component {
 
     static navigationOptions = ({navigation})=>({
@@ -19,7 +23,9 @@ class ActorListPage extends Component {
         dispatch(getActorList());
     }
 
-    render(){
+    render() {
+        const { data = [] } = this.props;
+        if (data.length === 0) return null;
         const ds = new ListView.DataSource({ 
             rowHasChanged : (r1,r2)=> r1 !== r2,
             sectionHeaderHasChanged:(s1,s2) => s1 !== s2,
@@ -30,10 +36,13 @@ class ActorListPage extends Component {
                 return dataBlob[rowId];
             }
         });
-        const { data = []} = this.props;
+       
         const _d = {}, sectionIdentities = [], rowIdentities = [];
 
-        data.forEach(({type, users}, index)=>{
+        data.forEach(({ type, users }, index) => {
+            if (index >2) {
+                return;
+            }
             _d[type] = { type, length: users.length}
             sectionIdentities.push(type);
             const rowId = [];
@@ -44,36 +53,42 @@ class ActorListPage extends Component {
             });
             rowIdentities.push(rowId);
         })
-        return (<ListView 
-        dataSource={ ds.cloneWithRowsAndSections(_d,sectionIdentities, rowIdentities) }
-        renderRow={ this._renderRow.bind(this)}
-        showsVerticalScrollIndicator={true}
-        stickySectionHeadersEnabled={true}
-        renderSectionHeader={this._renderHeader.bind(this)}
-        />)
+        return (<ListView
+            dataSource={ds.cloneWithRowsAndSections(_d, sectionIdentities, rowIdentities)}
+            renderRow={this._renderRow.bind(this)}
+            showsVerticalScrollIndicator={true}
+            stickySectionHeadersEnabled={true}
+            renderSectionHeader={this._renderHeader.bind(this)}
+            removeClippedSubviews={false}
+            initialListSize={10}
+
+        />);
     }
 
-    _renderRow({ id, avatar, name, enName, role},sectionId, rowId){
+    _renderRow({ id, avatar, name, enName, role }, sectionId, rowId) {
+        let roleComponent = null;
+        if (role !== '') {
+            roleComponent = (
+                <View style={style.roleView}>
+                    <Text style={style.roleText}>饰   {role}</Text>
+                </View>
+            );
+        }
         return (
                 <TouchableOpacity style={style.row}  key={id} onPress={ this._onPress.bind(this, id)}>
                     <Image source={ {uri:avatar}}  style={style.img}/>
                     <View style={style.right}>
                         <Text style={style.text}>{name}</Text>
                         <Text style={[style.text]}>{enName}</Text>
-                        <View  style={[style.roleView, role === '' ? style.hide:null]}>
-                            <Text style={style.roleText}>饰   {role}</Text>
-                        </View>
-                        
+                       {roleComponent}
                     </View>
                 </TouchableOpacity>
             )
     }
 
     _onPress(id){
-        console.log(id);
         const { navigation} = this.props;
         navigation.navigate('Celebrity',{id})
-        //Celebrity
     }
 
     _renderHeader({type, length},sectionId,rowId){
@@ -100,7 +115,8 @@ const style = StyleSheet.create({
         marginLeft:20,
         marginRight:20,
         borderBottomWidth: 1/ PixelRatio.get(),
-        borderBottomColor:'#ccc'
+        borderBottomColor: '#ccc',
+        overflow:'hidden'
         //  backgroundColor:'red'
         // marginBottom:10,
     },
@@ -121,9 +137,6 @@ const style = StyleSheet.create({
         height:30,
         // backgroundColor:'red',
         // marginLeft:10
-    },
-    hide:{
-        display:'none'
     },
     roleView:{
         flex:1,

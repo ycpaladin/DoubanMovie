@@ -16,6 +16,6 @@ export function getActorList(movieId) {
                 type:GET_ACTOR_COMPLETED,
                 playload: allActorData
             })
-        }, 1000);
+        }, 100);
     }
 }
