@@ -1,6 +1,4 @@
-import actionTypes from '../constants/actionTypes';
-import { Map} from 'immutable';
-const {
+import {
     // 正在获取电影详情
     GET_MOVIE_DETAILS_FETCHING, 
     // 获取电影详情完成
@@ -9,7 +7,8 @@ const {
     GET_MOVIE_DETAILS_FAIL,
 
     INIT_MOVIE_DETAILS
-} = actionTypes;
+}  from '../constants/actionTypes';
+import { Map} from 'immutable';
 
 const defaultState = {
     isFetching:false,

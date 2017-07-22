@@ -1,4 +1,7 @@
-import actionTypes from '../constants/actionTypes';
+import { 
+    GET_MOVID_LIST_FETCHING, GET_HOT_MOVID_LIST_COMPLETED,GET_COMING_MOVID_LIST_COMPLETED,
+    GET_MOVIE_DETAILS_FETCHING,GET_MOVIE_DETAILS_COMPLETED,GET_MOVIE_DETAILS_FAIL
+} from '../constants/actionTypes';
 import { AsyncStorage } from 'react-native';
 import Storage from 'react-native-storage';
 
@@ -23,10 +26,7 @@ const storage = new Storage({
     }
 });
 
-const { 
-    GET_MOVID_LIST_FETCHING, GET_HOT_MOVID_LIST_COMPLETED,GET_COMING_MOVID_LIST_COMPLETED,
-    GET_MOVIE_DETAILS_FETCHING,GET_MOVIE_DETAILS_COMPLETED,GET_MOVIE_DETAILS_FAIL,INIT_MOVIE_DETAILS
-} = actionTypes;
+// const  = actionTypes;
 
 const MOVIE_KEY = "MOVIE_STORAGE";
 
@@ -34,8 +34,8 @@ export function getMovieList(citycode = '北京') {
     return async dispatch => {
         try{
             dispatch({ type: GET_MOVID_LIST_FETCHING });
-            const response = await  fetch('https://api.douban.com/v2/movie/in_theaters');
-            const data = await response.json();
+            let response = await  fetch('https://api.douban.com/v2/movie/in_theaters');
+            let data = await response.json();
             dispatch({
                 type: GET_HOT_MOVID_LIST_COMPLETED,
                 payload: {
@@ -104,9 +104,9 @@ export function getMovieDetailsById(id, force = false){
 
 
 
-export function initMovieDetails(){
+// export function initMovieDetails(){
 
-    return {
-        type:INIT_MOVIE_DETAILS
-    }
-}
+//     return {
+//         type:INIT_MOVIE_DETAILS
+//     }
+// }

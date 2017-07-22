@@ -20,6 +20,7 @@ export default class MoviePage extends Component {
         headerRight:(<View style={{ flex:1, width:300, paddingRight:15}}>
             <SearchTextBoxComponent />
         </View>),
+        headerTintColor:'#848484',
         headerStyle:{  backgroundColor:'#fff', elevation:0, shadowOpacity:0,},
     });
     

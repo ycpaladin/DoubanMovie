@@ -2,8 +2,7 @@
 //     GET_ACTOR_COMPLETED:null,
 //     GET_ACTOR_FAIL:null,
 
-import actionTypes from '../constants/actionTypes';
-const { GET_ACTOR_FETCHING, GET_ACTOR_COMPLETED, GET_ACTOR_FAIL} = actionTypes;
+import { GET_ACTOR_FETCHING, GET_ACTOR_COMPLETED, GET_ACTOR_FAIL} from '../constants/actionTypes';
 
 const allActorData = require('./all');
 

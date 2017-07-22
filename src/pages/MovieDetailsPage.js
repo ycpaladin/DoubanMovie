@@ -118,7 +118,7 @@ const style = StyleSheet.create({
         flex:1,
     },
     detials:{
-        height:140,
+        // height:140,
         padding:15,
         flexDirection: 'row',
     },
@@ -131,7 +131,8 @@ const style = StyleSheet.create({
         marginBottom:5
     },
     dright:{
-        width:150,
+        width: 130,
+        height:110,
         padding:12,
         elevation: 2,
         shadowOffset: {width: 0, height: 0},

@@ -1,5 +1,4 @@
-import actionTypes from '../constants/actionTypes';
-const { GET_MOVID_LIST_FETCHING, GET_HOT_MOVID_LIST_COMPLETED,GET_COMING_MOVID_LIST_COMPLETED } = actionTypes;
+import  { GET_MOVID_LIST_FETCHING, GET_HOT_MOVID_LIST_COMPLETED,GET_COMING_MOVID_LIST_COMPLETED }  from '../constants/actionTypes';
 
 const defaultState = {
     isFetching: false,

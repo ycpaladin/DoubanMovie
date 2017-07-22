@@ -1,9 +1,8 @@
-import actionTypes from '../constants/actionTypes';
-const {
+import {
     GET_ACTOR_FETCHING,
     GET_ACTOR_COMPLETED,
     GET_ACTOR_FAIL
-} = actionTypes;
+} from '../constants/actionTypes';
 
 const defaultState = {
     isFetching:false,
